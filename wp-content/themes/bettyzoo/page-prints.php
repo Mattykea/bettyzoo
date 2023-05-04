@@ -1,0 +1,209 @@
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package WordPress
+ * @subpackage Twenty_Nineteen
+ * @since Twenty Nineteen 1.0
+ */
+
+get_header();
+?>
+<template> 
+    <article>
+          <img src="" alt="" />
+          <h2></h2>
+          <p class="pris"></p>
+        </article>
+</template>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+        <section id="top">
+            <h1>Prints</h1>
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium nulla quibusdam impedit nemo totam, laboriosam iure ab? Animi aliquid quaerat totam quasi obcaecati laboriosam numquam vel iure nobis necessitatibus.</p>
+        </section>
+        
+        <nav id="filtrering"> 
+
+        </nav>
+
+	        <section class="printcontainer"></section>
+
+		</main><!-- #main -->
+
+        <style> 
+
+        /* Skrifttyper */
+        @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Shrikhand", cursive;
+            letter-spacing: 2px;
+            color: #ec7322;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            color: #072E29;
+            font-family: "Calibri", sans-serif;
+        }
+
+        .p1 {
+            margin-top: 2%;
+        }
+
+         #content {
+            background-color: #D7EBD5;
+        }      
+
+       #top {
+        text-align: center;
+        margin: 10%;
+       }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+        }
+
+        nav button {
+            color: #072E29;
+            background-color: #F8FFF6;
+            border-radius: 0;
+            font-weight: bold;
+            border: 4px solid #347A62;
+            box-shadow: 8px 8px #11554C;
+        }
+
+        nav button:hover {
+            box-shadow: 12px 12px #11554C;
+            background-color: #F8FFF6;
+
+        }
+
+        nav button:focus {
+            color: white;
+            background-color: #347A62;
+
+        }
+
+        .printcontainer {
+            display: flex;
+            margin: 3%;
+            gap: 3.5%;
+
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        article {
+            max-width: 300px;
+            margin-bottom: 2%;
+            cursor: pointer;
+
+        }
+
+        article img {
+            aspect-ratio: 1/1.4;
+            object-fit: cover;
+            object-position: 50%;
+            box-shadow: 10px 10px #F07F66;
+
+        }
+
+        article img:hover {
+            box-shadow: 14px 14px #F07F66;
+
+        }
+
+        article h2 {
+            font-size: 1rem;
+            margin-top: 3%;
+        }
+
+
+        </style>
+
+
+        <script> 
+        console.log("nu starter script");
+        let prints;
+        let categories;
+        let filterPrint = "alle";
+
+        const dbUrl = "https://mathildese.dk/kea/4sem/bettyzoo/wp-json/wp/v2/print?per_page=100";
+        const catUrl = "https://mathildese.dk/kea/4sem/bettyzoo/wp-json/wp/v2/categories";
+
+    
+        async function getJson() {
+            const data = await fetch(dbUrl);
+            const catData = await fetch(catUrl);
+
+            prints = await data.json();
+            categories = await catData.json();
+
+            console.log(categories);
+            visPrints();
+            opretKnapper();
+        }
+
+        function opretKnapper() {
+
+        categories.forEach(cat =>{
+          document.querySelector("#filtrering").innerHTML += 
+          `<button class="filter" data-print="${cat.id}">${cat.name}</button>`
+        })
+
+        addEventListenersToButtons();
+      }
+
+      function addEventListenersToButtons(){
+          document.querySelectorAll("#filtrering button").forEach(elm => {
+            elm.addEventListener("click", filtrering);
+          })
+
+      };
+
+      function filtrering() {
+           filterPrint = this.dataset.print;
+           console.log(filterPrint);
+
+           visPrints();
+      }
+
+        function visPrints() {
+            let temp = document.querySelector("template");
+            let container = document.querySelector(".printcontainer");
+            container.innerHTML = "";
+            prints.forEach(print => {
+
+                if (filterPrint == "alle" || print.categories.includes(parseInt(filterPrint))) {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h2").textContent = print.title.rendered;
+                klon.querySelector("img").src = print.billede.guid;
+                klon.querySelector(".pris").textContent = print.pris;
+                klon.querySelector("article").addEventListener("click", ()=> {location.href = print.link;})
+
+                container.appendChild(klon);
+                }
+            })
+        }
+
+        getJson();
+
+        </script>
+
+
+	</div><!-- #primary -->
+
+<?php
+get_footer();
