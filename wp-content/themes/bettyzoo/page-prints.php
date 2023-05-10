@@ -11,20 +11,20 @@
 
 get_header();
 ?>
-<template> 
-    <article>
+    <template> 
+        <article>
           <img src="" alt="" />
           <h2></h2>
           <p class="pris"></p>
         </article>
-</template>
+    </template>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
         <section id="top">
             <h1>Prints</h1>
-        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium nulla quibusdam impedit nemo totam, laboriosam iure ab? Animi aliquid quaerat totam quasi obcaecati laboriosam numquam vel iure nobis necessitatibus.</p>
+        <p class="p1">Alle Betty Zoos kunstprint er printet på 200g naturlig kunstpapir med en mat, ubehandlet overflade og en let tekstureret overflade som sikrer farvernes tydelighed og intensitet. Papirets kvalitet sikrer at kunstprintet bevares på den bedst mulige måde. Alle prints er omhyggeligt udviklet og skabt af Betty Zoo i København. De passer i rammer i standard mål og dine prints vil blive omhyggeligt pakket og sendt. Vi håber du bliver glad for dit nye kunstværk!</p>
         </section>
         
         <nav id="filtrering"> 
@@ -72,6 +72,7 @@ get_header();
             display: flex;
             justify-content: center;
             gap: 2%;
+            flex-wrap: wrap;
         }
 
         nav button {
@@ -92,6 +93,7 @@ get_header();
         nav button:focus {
             color: white;
             background-color: #347A62;
+            box-shadow: 12px 12px #11554C;
 
         }
 
@@ -128,6 +130,16 @@ get_header();
         article h2 {
             font-size: 1rem;
             margin-top: 3%;
+        }
+
+        @media (max-width: 850px) {
+            nav button{
+                margin: 2%;
+            }
+
+            article {
+            margin-top: 8%;           
+            }
         }
 
 

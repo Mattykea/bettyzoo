@@ -17,6 +17,7 @@ h2:before {
   display: none;
 }
 
+/* Header */
 #masthead {
   background-color: #cde5c9;
   padding: 1.5%;
@@ -29,7 +30,13 @@ h2:before {
 
 #masthead .site-branding {
   margin-right: 0;
-  margin-left: 330px;
+  margin-left: 23%;
+}
+
+#masthead .site-branding .custom-logo-link {
+  width: 300px;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 #masthead .site-branding-container ul li a {
@@ -37,6 +44,11 @@ h2:before {
   text-decoration: none;
   font-weight: 400;
   font-size: 1rem;
+  padding: 10px;
+}
+
+#masthead .site-branding-container ul li a:hover {
+  color: #ec7322;
 }
 
 #masthead .site-branding-container ul li button {
@@ -45,7 +57,44 @@ h2:before {
   box-shadow: none;
 }
 
-#masthead .site-branding .custom-logo-link {
-  width: 300px;
-  border-radius: 0;
+.main-navigation .sub-menu {
+  background-color: #cde5c9;
+  padding-inline: 7%;
+  text-align: center;
+}
+
+.main-navigation .sub-menu li a:hover {
+  background-color: #cde5c9;
+}
+
+/* burgermenu */
+#masthead .site-branding-container ul li .main-menu-more-toggle {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #masthead .site-branding-container ul li .main-menu-more-toggle {
+    background: transparent;
+    border: none;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  .main-menu.shown {
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+
+  .main-menu ul {
+    display: flex;
+    flex-flow: column;
+  }
 }
