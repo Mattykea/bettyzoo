@@ -47,6 +47,7 @@ get_header();
             letter-spacing: 2px;
             color: #ec7322;
             margin: 0;
+            font-weight: 400;
         }
 
         p {
@@ -202,7 +203,7 @@ get_header();
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h2").textContent = print.title.rendered;
                 klon.querySelector("img").src = print.billede.guid;
-                klon.querySelector(".pris").textContent = print.pris;
+                klon.querySelector(".pris").textContent = print.pris  + " kr.";
                 klon.querySelector("article").addEventListener("click", ()=> {location.href = print.link;})
 
                 container.appendChild(klon);

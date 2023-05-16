@@ -271,7 +271,7 @@ get_header();
 
                 document.querySelector("h2").textContent = print.title.rendered;
                 document.querySelector(".img").src = print.billede.guid;
-                document.querySelector(".pris").textContent = print.pris;
+                document.querySelector(".pris").textContent = print.pris  + " kr.";
                 document.querySelector(".beskrivelse").textContent = print.beskrivelse;
 
             }
