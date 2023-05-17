@@ -66,35 +66,3 @@ h2:before {
 .main-navigation .sub-menu li a:hover {
   background-color: #cde5c9;
 }
-
-/* burgermenu */
-#masthead .site-branding-container ul li .main-menu-more-toggle {
-  display: none;
-}
-
-@media (max-width: 800px) {
-  #masthead .site-branding-container ul li .main-menu-more-toggle {
-    background: transparent;
-    border: none;
-    display: block;
-    min-width: 44px;
-    min-height: 44px;
-    font-size: 1.1rem;
-    cursor: pointer;
-  }
-
-  .main-menu {
-    display: none;
-  }
-
-  .main-menu.shown {
-    display: flex;
-    flex: 1 1 100%;
-    flex-flow: column;
-  }
-
-  .main-menu ul {
-    display: flex;
-    flex-flow: column;
-  }
-}
