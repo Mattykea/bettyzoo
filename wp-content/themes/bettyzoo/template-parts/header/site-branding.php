@@ -9,26 +9,15 @@
 ?>
 <div class="site-branding">
 
-	<?php if ( has_custom_logo() ) : ?>
-		<div class="site-logo logo-special"><?php the_custom_logo(); ?></div>
-	<?php endif; ?>
-	<?php $blog_info = get_bloginfo( 'name' ); ?>
-	<?php if ( ! empty( $blog_info ) ) : ?>
-		
-	<?php endif; ?>
 
-	<?php
-	$description = get_bloginfo( 'description', 'display' );
-	if ( $description || is_customize_preview() ) :
-		?>
-			<p class="site-description">
-				<?php echo $description; ?>
-			</p>
-	<?php endif; ?>
 	<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
+			
+			<a class="betty-logo" href="https://mathildese.dk/kea/4sem/bettyzoo/"><img src="https://mathildese.dk/kea/4sem/bettyzoo/wp-content/uploads/2023/05/nyt-logo-16.svg" alt="Betty Zoos logo"></a>
+			
 			<?php
 			wp_nav_menu(
+
 				array(
 					'theme_location' => 'menu-1',
 					'menu_class'     => 'main-menu',

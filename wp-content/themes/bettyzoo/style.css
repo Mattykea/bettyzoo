@@ -5,7 +5,37 @@ Version:      1.0.0
 Description:  Twenty Nineteen Child Theme
 Author:      Mathilde Skriver Eriksen
 */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Shrikhand&display=swap");
 
+h1,
+h2,
+h3 {
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 2px;
+  color: #ec7322;
+  margin: 0;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+  color: #072e29;
+  font-family: "Rubik", sans-serif;
+}
+
+.p1 {
+  margin-top: 2%;
+}
+
+/* Baggrundsbillede */
+#content {
+  background-image: url("https://mathildese.dk/kea/4sem/bettyzoo/wp-content/themes/bettyzoo/images/bggrafik.svg");
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* Fjern "made with wordpress" fra footer */
 .site-info {
   display: none;
@@ -21,48 +51,41 @@ h2:before {
 #masthead {
   background-color: #cde5c9;
   padding: 1.5%;
-  padding-bottom: 2%;
-}
-
-#masthead .site-branding-container {
-  text-align: end;
 }
 
 #masthead .site-branding {
-  margin-right: 0;
-  margin-left: 23%;
+  margin-inline: 0;
 }
 
-#masthead .site-branding .custom-logo-link {
-  width: 300px;
-  border-radius: 0;
+.betty-logo img {
+  width: 25%;
+}
+
+#site-navigation {
+  display: flex;
+  align-items: center;
+}
+
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 {
+  display: flex;
+}
+
+#mega-menu-wrap-menu-1 {
+  min-width: fit-content;
+}
+
+.betty-logo {
+  display: flex;
+  align-items: center;
+}
+
+.elementor-kit-40 button,
+span {
   box-shadow: none;
 }
 
-#masthead .site-branding-container ul li a {
-  color: #072e29;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 10px;
-}
-
-#masthead .site-branding-container ul li a:hover {
-  color: #ec7322;
-}
-
-#masthead .site-branding-container ul li button {
-  color: #072e29;
-  background: none;
-  box-shadow: none;
-}
-
-.main-navigation .sub-menu {
-  background-color: #cde5c9;
-  padding-inline: 7%;
-  text-align: center;
-}
-
-.main-navigation .sub-menu li a:hover {
-  background-color: #cde5c9;
+@media (max-width: 800px) {
+  .betty-logo img {
+    width: 60%;
+  }
 }
