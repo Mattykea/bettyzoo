@@ -22,76 +22,47 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-        <section id="top">
-            <h1>Prints</h1>
-        <p class="p1">Alle Betty Zoos kunstprint er printet på 200g naturlig kunstpapir med en mat, ubehandlet overflade og en let tekstureret overflade som sikrer farvernes tydelighed og intensitet. Papirets kvalitet sikrer at kunstprintet bevares på den bedst mulige måde. Alle prints er omhyggeligt udviklet og skabt af Betty Zoo i København. De passer i rammer i standard mål og dine prints vil blive omhyggeligt pakket og sendt. Vi håber du bliver glad for dit nye kunstværk!</p>
-        </section>
+            <section id="top">
+                <h1>Prints</h1>
+                <p class="p1">Alle Betty Zoos kunstprint er printet på 200g naturlig kunstpapir med en mat, ubehandlet overflade og en let tekstureret overflade som sikrer farvernes tydelighed og intensitet. Papirets kvalitet sikrer at kunstprintet bevares på den bedst mulige måde. Alle prints er omhyggeligt udviklet og skabt af Betty Zoo i København. De passer i rammer i standard mål og dine prints vil blive omhyggeligt pakket og sendt. Vi håber du bliver glad for dit nye kunstværk!</p>
+            </section>
         
-        <nav id="filtrering"> 
-
-        </nav>
+            <nav id="filtrering"></nav>
 
 	        <section class="printcontainer"></section>
 
 		</main><!-- #main -->
 
         <style> 
-
-        /* Skrifttyper */
-        @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-
-        h1,
-        h2,
-        h3 {
-            font-family: "Shrikhand", cursive;
-            letter-spacing: 2px;
-            color: #ec7322;
-            margin: 0;
-            font-weight: 400;
-        }
-
-        p {
-            margin: 0;
-            color: #072E29;
-            font-family: "Calibri", sans-serif;
-        }
-
-        .p1 {
-            margin-top: 2%;
-        }
-
-         #content {
-            background-color: #D7EBD5;
-        }      
-
        #top {
         text-align: center;
         margin: 10%;
        }
 
-        nav {
+        #filtrering {
             display: flex;
             justify-content: center;
             gap: 2%;
             flex-wrap: wrap;
         }
 
-        nav button {
+        #filtrering button {
             color: #072E29;
             background-color: #F8FFF6;
             border-radius: 0;
+            font-family: 'Rubik', sans-serif;
             font-weight: bold;
             border: 4px solid #347A62;
             box-shadow: 8px 8px #11554C;
         }
 
-        nav button:hover {
+        #filtrering button:hover {
             box-shadow: 12px 12px #11554C;
             background-color: #F8FFF6;
 
         }
 
-        nav button:focus {
+        #filtrering button:focus {
             color: white;
             background-color: #347A62;
             box-shadow: 12px 12px #11554C;
@@ -125,7 +96,6 @@ get_header();
 
         article img:hover {
             box-shadow: 14px 14px #F07F66;
-
         }
 
         article h2 {
@@ -134,8 +104,18 @@ get_header();
         }
 
         @media (max-width: 850px) {
-            nav button{
+            #top {
+                text-align: left;
+            }
+            
+            #filtrering button{
                 margin: 2%;
+            }
+
+            #filtrering button:hover {
+                color: white;
+                background-color: #347A62;
+
             }
 
             article {

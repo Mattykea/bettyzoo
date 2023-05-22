@@ -12,84 +12,66 @@
 get_header();
 ?>
  
-    
-
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 	        <article>
                 <img class="img left" src="" alt="" />
                 <div class="right">
-                <h2 class="h2"></h2>
-                <p class="beskrivelse"></p>
-                <div>
-                    <h3>Størrelse</h3>
-                    <div class="str">                   
-                        <button>A4</button>
-                        <button>A3</button>
-                        <button>A2</button>
-                        <button>A1</button>
+                    <h2 class="h2"></h2>
+                    <p class="beskrivelse"></p>
+                    <div>
+                        <h3>Størrelse</h3>
+                        <div class="str">                   
+                            <button>A4</button>
+                            <button>A3</button>
+                            <button>A2</button>
+                            <button>A1</button>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h3>Farve</h3>
-                    <div class="farve">                   
-                        <button>Lilla</button>
-                        <button>Grøn</button>
+                    <div>
+                        <h3>Farve</h3>
+                        <div class="farve">                   
+                            <button>Lilla</button>
+                            <button>Grøn</button>
+                        </div>
                     </div>
-                </div>
-                <div>
-                <h3 class="pris"></h3>
-                    <div class="kob">                   
-                        <button class="sek">Læg i indkøbskurv</button>
-                        <button class="pri">Køb nu</button>
+                    <div>
+                        <h3 class="pris"></h3>
+                        <div class="kob">                   
+                            <button class="sek">Læg i indkøbskurv</button>
+                            <button class="pri">Køb nu</button>
+                        </div>
                     </div>
-                </div>
                 </div>
             </article>
 
             <section class="andre">
                 <h2>Andre har også set</h2>
-                <div class="billeder">
-                <img src="/billeder/cityscape.webp" alt="Cityscape - illustration af en nøgen dame der ligger på maven i sin seng foran et vindue med udsigt over byen">
-                <img src="/billeder/cityscape.webp" alt="Cityscape - illustration af en nøgen dame der ligger på maven i sin seng foran et vindue med udsigt over byen">
-                <img src="/billeder/cityscape.webp" alt="Cityscape - illustration af en nøgen dame der ligger på maven i sin seng foran et vindue med udsigt over byen">
+                <div class="billeder"> 
+                    <a href="https://mathildese.dk/kea/4sem/bettyzoo/print/posing-2/">
+                        <img src="https://mathildese.dk/kea/4sem/bettyzoo/wp-content/uploads/2023/05/posing-384051_1080x.webp" alt="Blæk-tegning af mand uden bluse">
+                    </a>
+                    <a href="https://mathildese.dk/kea/4sem/bettyzoo/print/skaterboy/">
+                        <img src="https://mathildese.dk/kea/4sem/bettyzoo/wp-content/uploads/2023/05/skaterboy-665102_1080x.webp" alt="Print af man der skater væk på et skateboard">
+                    </a>
+                    <a href="https://mathildese.dk/kea/4sem/bettyzoo/print/grl-pwr/">
+                        <img src="https://mathildese.dk/kea/4sem/bettyzoo/wp-content/uploads/2023/05/girlpwr-412301_1080x.webp" alt="Linjetegning a to kvinder uden bluse med ryggen til">
+                    </a>
+                    <a href="https://mathildese.dk/kea/4sem/bettyzoo/print/cityscape/">
+                        <img src="https://mathildese.dk/kea/4sem/bettyzoo/wp-content/uploads/2023/05/cityscape-917817_740x.webp" alt="Nøgen kvinder ligger på en seng på maven med udsigt over byen">
+                    </a>
                 </div> 
             </section>
 
 		</main><!-- #main -->
 
-        <style> 
-        /* Skrifttyper */
-        @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-
-        h1,
-        h2,
-        h3 {
-            font-family: "Shrikhand", cursive;
-            font-weight: 400;
-            letter-spacing: 2px;
-            color: #ec7322;
-            margin: 0;
-        }
-
-        h3 {
-            font-size: 28px;
-        }
-
-        p {
-            color: #072E29;
-            font-family: "Calibri", sans-serif;
-        }
+        <style>  
         
-        #content {
-            background-color: #D7EBD5;
-        }
-
         article {
-            margin-inline: 5%;
-        }
+            margin-block-start: 10%;
+            margin-inline: 10%;
+        }        
 
         .h2 {
             margin-block-start: 10%;
@@ -99,7 +81,7 @@ get_header();
             margin-block-end: 15%;
         }
 
-        /* KNAPPER GRØNNE*/
+        /* KNAPPER GENERELT*/
         .str, .farve, .kob {
             display: flex;
             gap: 4%;
@@ -108,10 +90,12 @@ get_header();
             margin-bottom: 7%;
         }
 
+        /* KNAPPER GRØNNE*/
         .str button, .farve button {
             color: #072E29;
             background-color: #F8FFF6;
             border-radius: 0;
+            font-family: 'Rubik', sans-serif;
             font-weight: bold;
             border: 4px solid #347A62;
             box-shadow: 8px 8px #11554C;
@@ -122,20 +106,16 @@ get_header();
         .str button:hover, .farve button:hover {
             box-shadow: 12px 12px #11554C;
             background-color: #F8FFF6;
-        }
-
-        .str button:focus, .farve button:focus {
             color: white;
             background-color: #347A62;
-            box-shadow: 12px 12px #11554C;
-
-        }
+        }       
 
         /* KNAP PRIMÆR */
         .kob .pri {
             color: white;
             background-color: #F07F66;
             border-radius: 0;
+            font-family: 'Rubik', sans-serif;
             font-weight: bold;
             border: 4px solid #F07F66;
             box-shadow: 8px 8px #EC7322;
@@ -158,6 +138,7 @@ get_header();
             color: #EC7322;
             background-color: white;
             border-radius: 0;
+            font-family: 'Rubik', sans-serif;
             font-weight: bold;
             border: 4px solid #F07F66;
             box-shadow: 8px 8px #F07F66;
@@ -188,14 +169,17 @@ get_header();
             object-fit: cover;
             object-position: 50%;
             box-shadow: 10px 10px #F07F66;
-
         }
 
          article img:hover, .billeder img:hover {
             box-shadow: 14px 14px #F07F66;
-
         }
 
+        .billeder img {
+            margin-block: 5%;
+        }
+       
+        /* Tablet og Web */
         @media (min-width: 800px) {
             article {
                 display: grid;
@@ -205,12 +189,26 @@ get_header();
                 margin-inline: 10%;
             }
 
+            /* KNAPPER GRØNNE */
             .str, .farve, .kob {
                 margin-block-end: 4%;
             }
 
             .str button, .farve button {
                 width: 20%;
+            }
+
+            .str button:hover, .farve button:hover {
+                box-shadow: 12px 12px #11554C;
+                background-color: #F8FFF6;
+                color: #072E29;
+            }
+
+            .str button:focus, .farve button:focus {
+                color: white;
+                background-color: #347A62;
+                box-shadow: 12px 12px #11554C;
+
             }
 
             .kob {
@@ -240,15 +238,19 @@ get_header();
                 padding-block: 5%;
                 padding-inline: 10%;
             }
-
+           
             .billeder {
                 display: flex;
-                gap: 5%;
-                max-width: 1fr;
+                justify-content: space-between;
                 margin-block-start: 3%;
             }
-        }
 
+            .billeder a {
+                width: 23%;
+                margin-block: 0%;               
+            }
+
+        }
     
         </style>
 
