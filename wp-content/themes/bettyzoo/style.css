@@ -36,6 +36,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* Fjern "made with wordpress" fra footer */
 .site-info {
   display: none;
@@ -59,6 +60,7 @@ h2:before {
 
 .betty-logo img {
   width: 25%;
+  height: 100%;
 }
 
 #site-navigation {
@@ -87,5 +89,6 @@ span {
 @media (max-width: 800px) {
   .betty-logo img {
     width: 60%;
+    height: 100%;
   }
 }
