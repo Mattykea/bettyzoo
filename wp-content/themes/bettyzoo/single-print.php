@@ -19,7 +19,6 @@ get_header();
                 <img class="img left" src="" alt="" />
                 <div class="right">
                     <h2 class="h2"></h2>
-                    <p class="beskrivelse"></p>
                     <div>
                         <h3>Størrelse</h3>
                         <div class="str">                   
@@ -36,13 +35,18 @@ get_header();
                             <button>Grøn</button>
                         </div>
                     </div>
-                    <div>
+                    <div class="pris-con">
                         <h3 class="pris"></h3>
                         <div class="kob">                   
                             <button class="sek">Læg i indkøbskurv</button>
                             <button class="pri">Køb nu</button>
                         </div>
                     </div>
+                    <div>
+                        <h3>Beskrivelse</h3>
+                        <p class="beskrivelse"></p>
+                    </div>
+
                 </div>
             </article>
 
@@ -75,6 +79,11 @@ get_header();
 
         .h2 {
             margin-block-start: 10%;
+            margin-block-end: 5%;
+        }
+
+        .right h3 {
+            font-size: 1.2rem;
         }
 
         .beskrivelse {
@@ -92,6 +101,7 @@ get_header();
 
         /* KNAPPER GRØNNE*/
         .str button, .farve button {
+            padding-block: 8px;
             color: #072E29;
             background-color: #F8FFF6;
             border-radius: 0;
@@ -111,6 +121,10 @@ get_header();
         }       
 
         /* KNAP PRIMÆR */
+        .pris-con {
+            margin-block: 10%;
+        }
+
         .kob .pri {
             color: white;
             background-color: #F07F66;

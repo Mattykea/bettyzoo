@@ -35,8 +35,13 @@ get_header();
 
         <style> 
        #top {
-        text-align: center;
+        text-align: left;
         margin: 10%;
+        margin-inline: 15%;
+       }
+
+       #top h1 {
+        text-align: center;
        }
 
         #filtrering {
