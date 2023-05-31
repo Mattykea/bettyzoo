@@ -76,6 +76,10 @@ h2:before {
   min-width: fit-content;
 }
 
+#mega-menu-wrap-menu-1 #mega-menu-menu-1 a.mega-menu-link {
+  display: none;
+}
+
 .betty-logo {
   display: flex;
   align-items: center;
